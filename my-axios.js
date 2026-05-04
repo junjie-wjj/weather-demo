@@ -32,7 +32,7 @@ function myAxios(config) {
 document.querySelector('.reg-btn').addEventListener('click', () => {
   // 3. 使用myAxios函数，完成注册用户
   myAxios({
-    url: 'http://hmajax.itheima.net/api/register',
+    url: 'https://hmajax.itheima.net/api/register',
     method: 'POST',
     data: {
       username: 'itheima999',

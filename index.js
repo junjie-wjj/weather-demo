@@ -5,7 +5,7 @@
  */
     function getWeather(cityCode){
         myAxios({
-            url:"http://hmajax.itheima.net/api/weather",
+            url:"https://hmajax.itheima.net/api/weather",
             params:{
                 city:cityCode
             }
@@ -70,7 +70,7 @@ getWeather('110100');
         const city=e.target.value
         console.log(city)
         myAxios({
-            url:'http://hmajax.itheima.net/api/weather/city',
+            url:'https://hmajax.itheima.net/api/weather/city',
             params:{
                 city
             }
