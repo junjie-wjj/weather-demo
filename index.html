@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气预报</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="header">
+            <div class="date">02月10日 农历 正月二十</div>
+            <div class="location-section">
+                <div class="location-icon">📍</div>
+                <div class="selected-city" id="selectedCity">北京市</div>
+                <div class="search-wrapper">
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索地区">
+                    <ul class="search-results" id="searchResults">
+                        <li class="result-item" data-city="北京市" data-district="北京市-北京">北京市-北京</li>
+                        <li class="result-item" data-city="天津" data-district="河北区-天津">河北区-天津</li>
+                        <li class="result-item" data-city="天津" data-district="北辰区-天津">北辰区-天津</li>
+                        <li class="result-item" data-city="天津" data-district="北闸区-天津">北闸区-天津</li>
+                        <li class="result-item" data-city="河北省" data-district="路北区-河北省">路北区-河北省</li>
+                        <li class="result-item" data-city="上海" data-district="浦东新区-上海">浦东新区-上海</li>
+                        <li class="result-item" data-city="广州" data-district="天河区-广州">天河区-广州</li>
+                        <li class="result-item" data-city="深圳" data-district="南山区-深圳">南山区-深圳</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="temperature">0°</div>
+            <div class="air-quality">
+                <span class="quality-badge">105 轻度</span>
+            </div>
+            <div class="weather-info">
+                <span>西南风</span>
+                <span>2级</span>
+            </div>
+            <div class="weather-details">
+                <span>今天: 多云 -2~6°C</span>
+                <span>紫外线中等</span>
+                <span>湿度 80%</span>
+                <span>日出 07:15</span>
+                <span>日落 17:44</span>
+            </div>
+        </div>
+        
+        <div class="forecast-section">
+            <h3>7日内天气预报</h3>
+            <div class="forecast-grid">
+                <div class="forecast-card">
+                    <div class="forecast-date">今天</div>
+                    <div class="forecast-date-detail">02月10日</div>
+                    <div class="forecast-icon">🌥️</div>
+                    <div class="forecast-weather">多云</div>
+                    <div class="forecast-temp">-2~6°C</div>
+                    <div class="forecast-wind">南风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">明天</div>
+                    <div class="forecast-date-detail">02月11日</div>
+                    <div class="forecast-icon">🌥️</div>
+                    <div class="forecast-weather">多云</div>
+                    <div class="forecast-temp">0~7°C</div>
+                    <div class="forecast-wind">北风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">后天</div>
+                    <div class="forecast-date-detail">02月12日</div>
+                    <div class="forecast-icon">🌧️</div>
+                    <div class="forecast-weather">阴</div>
+                    <div class="forecast-temp">-4~3°C</div>
+                    <div class="forecast-wind">东北风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">周一</div>
+                    <div class="forecast-date-detail">02月13日</div>
+                    <div class="forecast-icon">☀️</div>
+                    <div class="forecast-weather">晴</div>
+                    <div class="forecast-temp">-5~7°C</div>
+                    <div class="forecast-wind">东北风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">周二</div>
+                    <div class="forecast-date-detail">02月14日</div>
+                    <div class="forecast-icon">☀️</div>
+                    <div class="forecast-weather">晴</div>
+                    <div class="forecast-temp">-7~5°C</div>
+                    <div class="forecast-wind">北风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">周三</div>
+                    <div class="forecast-date-detail">02月15日</div>
+                    <div class="forecast-icon">🌥️</div>
+                    <div class="forecast-weather">多云</div>
+                    <div class="forecast-temp">-7~3°C</div>
+                    <div class="forecast-wind">东南风 <3级</div>
+                </div>
+                <div class="forecast-card">
+                    <div class="forecast-date">周四</div>
+                    <div class="forecast-date-detail">02月16日</div>
+                    <div class="forecast-icon">☀️</div>
+                    <div class="forecast-weather">晴</div>
+                    <div class="forecast-temp">-5~5°C</div>
+                    <div class="forecast-wind">西南风 <3级</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="search.js"></script>
+    <script src="./my-axios.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
