@@ -75,11 +75,11 @@ getWeather('110100');
         }).then(result=>{
             const liStr=result.data.map(item=>{
                 console.log(item)
+                console.log(item)
                 return`
                 <li class="result-item" data-city="北京市" 
-                data-district="北京市-北京" data-code='${item.code}' style="display: block;">${item.name}</li> 
+                data-district="北京市-北京" data-code=${item.code} style="display: block;">${item.name}</li> 
                 `
-                
             }).join('')
             document.querySelector('.search-results').innerHTML=liStr
         })
@@ -95,6 +95,5 @@ getWeather('110100');
         if(e.target.classList.contains('result-item')){
             const cityCode=e.target.dataset.code;
             getWeather(cityCode);
-
         }
     })
