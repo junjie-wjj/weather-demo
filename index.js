@@ -41,9 +41,7 @@
         document.querySelector('.main-content').innerHTML=todayWStr
         const dayForecast=result.data.dayForecast
         const dayFStr=dayForecast.map(item=>{
-            return `
-                    
-                    <div class="forecast-card">
+            return `<div class="forecast-card">
                     <div class="forecast-date">${item.dateFormat}</div>
                     <div class="forecast-date-detail">${item.date}</div>
                     <img src="${item.weatherImg}" alt="">
@@ -79,7 +77,7 @@ getWeather('110100');
                 console.log(item)
                 return`
                 <li class="result-item" data-city="北京市" 
-                data-district="北京市-北京" data-code=${item.code} style="display: block;">${item.name}</li> 
+                data-district="北京市-北京" data-code='${item.code}' style="display: block;">${item.name}</li> 
                 `
                 
             }).join('')
@@ -95,7 +93,7 @@ getWeather('110100');
     document.querySelector('.search-results').addEventListener
     ('click',e=>{
         if(e.target.classList.contains('result-item')){
-            cityCode=e.target.dataset.code;
+            const cityCode=e.target.dataset.code;
             getWeather(cityCode);
 
         }
